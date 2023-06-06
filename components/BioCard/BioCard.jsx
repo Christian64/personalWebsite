@@ -14,7 +14,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 export const BioCard = () => {
   return (
     <Flex alignItems="center" mt={20}>
-      <Image src="./ex6.png" maxH={600} />
+      <Image src="./ex.png" maxH={600} />
       <Box mb="3em">
         <Heading
           fontSize="5em"
