@@ -24,7 +24,7 @@ export const Navbar = () => {
         bg="white"
         m="auto"
         mt={10}
-        display={{ lg: "flex", xl: "flex", md: "none", sm: "none" }}
+        display={["none", "none", "flex", "flex"]}
         borderRadius={50}
         boxShadow="lg"
         maxW={800}

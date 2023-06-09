@@ -29,7 +29,7 @@ export const BioCard = () => {
         </Heading>
         <Button
           colorScheme="yellow"
-          display={{ lg: "block", xl: "block", sm: "none", md: "none" }}
+          display={["none", "none", "block", "block"]}
           size="lg"
           mt={4}
         >
