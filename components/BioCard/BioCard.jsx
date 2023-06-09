@@ -1,61 +1,40 @@
-import {
-  Heading,
-  Text,
-  Box,
-  Image,
-  Button,
-  Flex,
-  Icon,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Heading, Box, Button, Flex } from "@chakra-ui/react";
 import "@fontsource/roboto";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const BioCard = () => {
   return (
-    <Flex alignItems="center" mt={20}>
-      <Image src="./ex.png" maxH={600} />
-      <Box mb="3em">
+    <Flex
+      w={{ lg: "50%", xl: "50%", md: "100%", sm: "100%" }}
+      alignItems={{ sm: "center", md: "center", lg: "start", xl: "start" }}
+      justifyContent="center"
+      mt={{ xl: 20, lg: 20 }}
+    >
+      <Box>
         <Heading
-          fontSize="5em"
+          fontSize={{ lg: "5em", xl: "5em", md: "3em", sm: "3em" }}
           maxW="400px"
+          textAlign={{ md: "center", sm: "center", lg: "start", xl: "start" }}
           lineHeight="1em"
           color="#3b3a3a"
           fontFamily="Roboto"
         >
           Christian Abreu.
         </Heading>
-        <Heading fontFamily="Roboto" color="#FF3131">
-          Javascript Developer.
+        <Heading
+          textAlign={{ md: "center", sm: "center", lg: "start", xl: "" }}
+          fontFamily="Roboto"
+          color="#FF3131"
+        >
+          Full Stack Developer
         </Heading>
-        <Flex mt={5} bg="" gap={3}>
-          <NextLink href="https://www.linkedin.com/in/christianabreuh">
-            <Button
-              _hover={{ boxShadow: "sm" }}
-              size="lg"
-              boxShadow="md"
-              borderRadius={100}
-              color="white"
-              bg="#0072b1"
-            >
-              <Icon as={BsLinkedin} mr={2} />
-              <Text>Linkedin</Text>
-            </Button>
-          </NextLink>
-          <NextLink href="https://www.github.com/christian64">
-            <Button
-              _hover={{ boxShadow: "sm" }}
-              size="lg"
-              boxShadow="md"
-              borderRadius={50}
-              color="white"
-              bg="black"
-            >
-              <Icon as={BsGithub} mr={2} />
-              <Text>Github</Text>
-            </Button>
-          </NextLink>
-        </Flex>
+        <Button
+          colorScheme="yellow"
+          display={{ lg: "block", xl: "block", sm: "none", md: "none" }}
+          size="lg"
+          mt={4}
+        >
+          Let's talk
+        </Button>
       </Box>
     </Flex>
   );

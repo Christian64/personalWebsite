@@ -1,30 +1,22 @@
-import { Box, Image, HStack, Text, Button, Heading } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Image, Link, Text, Heading } from "@chakra-ui/react";
 
-export const ProjectCard = ({
-  thumbnail,
-  description,
-  title,
-  sourceCode,
-  link,
-}) => {
+export const ProjectCard = ({ thumbnail, description, title, link }) => {
   return (
-    <Box w="33%" maxW={400} boxShadow="md" bg="white" borderRadius={5}>
+    <Link
+      style={{ textDecoration: "none" }}
+      maxW={{ lg: 300, xl: 300, md: "90%", sm: "90%" }}
+      boxShadow="md"
+      bg="white"
+      href={link}
+      borderRadius={5}
+    >
       <Image src={thumbnail} />
-      <Heading textAlign="center" color="#3b3a3a" p={2}>
+      <Heading textAlign="center" size="md" color="#3b3a3a" p={2}>
         {title}
       </Heading>
-      <Text px={6}>{description}</Text>
-      <HStack mt={5}>
-        <Button variant="ghost" flexGrow={1} colorScheme="twitter">
-          <NextLink href={link} target="_blank">
-            Live
-          </NextLink>
-        </Button>
-        <Button variant="ghost" flexGrow={1} colorScheme="twitter">
-          <NextLink href={sourceCode}>Source Code</NextLink>
-        </Button>
-      </HStack>
-    </Box>
+      <Text px={5} pb={3}>
+        {description}
+      </Text>
+    </Link>
   );
 };

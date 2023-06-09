@@ -3,7 +3,7 @@ import { BioCard } from "@/components/BioCard/BioCard";
 import { Footer } from "@/components/Footer/Footer";
 import Head from "next/head";
 import { Projects } from "@/components/Projects/Projects";
-import { Aboutme } from "@/components/Aboutme/Aboutme";
+import { Flex } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -12,9 +12,14 @@ export default function Home() {
         <title>Christian Abreu</title>
       </Head>
       <Navbar />
-      <BioCard />
-      <Projects />
-      <Aboutme />
+      <Flex
+        p={5}
+        mt={6}
+        direction={{ lg: "row", xl: "row", md: "column", sm: "column" }}
+      >
+        <BioCard />
+        <Projects />
+      </Flex>
       <Footer />
     </>
   );
