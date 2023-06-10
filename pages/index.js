@@ -12,7 +12,11 @@ export default function Home() {
         <title>Christian Abreu</title>
       </Head>
       <Navbar />
-      <Flex p={5} mt={6} direction={["column", "column", "row", "row"]}>
+      <Flex
+        p={[0, 0, 5, 5]}
+        mt={[3, 3, 6, 6]}
+        direction={["column", "column", "row", "row"]}
+      >
         <BioCard />
         <Projects />
       </Flex>

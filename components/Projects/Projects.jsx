@@ -1,10 +1,22 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex, Heading, Button } from "@chakra-ui/react";
 import { ProjectCard } from "../Projects/ProjectCard";
 import { projects } from "@/data/projects";
 
 export const Projects = () => {
   return (
-    <Box p={5} w={{ xl: "50%", lg: "50%", md: "100%", sm: "100%" }}>
+    <Flex
+      p={5}
+      w={{ xl: "50%", lg: "50%", md: "100%", sm: "100%" }}
+      direction="column"
+      alignItems="center"
+    >
+      <Heading
+        display={["none", "none", "block", "block"]}
+        textAlign="center"
+        mb={3}
+      >
+        Projects
+      </Heading>
       <Flex
         justifyContent={{
           md: "center",
@@ -19,6 +31,14 @@ export const Projects = () => {
           <ProjectCard key={i} {...project} />
         ))}
       </Flex>
-    </Box>
+      <Button
+        mt={4}
+        colorScheme="red"
+        variant="ghost"
+        w={["100%", "100%", 150, 150]}
+      >
+        Load More.
+      </Button>
+    </Flex>
   );
 };

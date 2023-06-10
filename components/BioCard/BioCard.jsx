@@ -1,17 +1,26 @@
-import { Heading, Box, Button, Flex } from "@chakra-ui/react";
+import {
+  HStack,
+  Icon,
+  Heading,
+  Box,
+  Button,
+  Link,
+  Flex,
+} from "@chakra-ui/react";
+import { BsGithub, BsLinkedin, BsFilePdf } from "react-icons/bs";
 import "@fontsource/roboto";
 
 export const BioCard = () => {
   return (
     <Flex
-      w={{ lg: "50%", xl: "50%", md: "100%", sm: "100%" }}
+      w={["100%", "100%", "50%", "50%"]}
       alignItems={{ sm: "center", md: "center", lg: "start", xl: "start" }}
       justifyContent="center"
       mt={{ xl: 20, lg: 20 }}
     >
       <Box>
         <Heading
-          fontSize={{ lg: "5em", xl: "5em", md: "3em", sm: "3em" }}
+          fontSize={["3em", "3em", "5em", "5em"]}
           maxW="400px"
           textAlign={{ md: "center", sm: "center", lg: "start", xl: "start" }}
           lineHeight="1em"
@@ -21,7 +30,7 @@ export const BioCard = () => {
           Christian Abreu.
         </Heading>
         <Heading
-          textAlign={{ md: "center", sm: "center", lg: "start", xl: "" }}
+          textAlign={["center", "center", "start", "start"]}
           fontFamily="Roboto"
           color="#FF3131"
         >
@@ -35,6 +44,28 @@ export const BioCard = () => {
         >
           Let's talk
         </Button>
+        <HStack
+          justifyContent="center"
+          mt={2}
+          display={["flex", "flex", "none", "none"]}
+        >
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://www.github.com/christian64"
+          >
+            <Icon boxSize={5} as={BsGithub} />
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            px={5}
+            href="https://www.linkedin.com/in/christianabreuh"
+          >
+            <Icon boxSize={5} as={BsLinkedin} />
+          </Link>
+          <Link style={{ textDecoration: "none" }} href="./resume.pdf">
+            <Icon boxSize={5} as={BsFilePdf} />
+          </Link>
+        </HStack>
       </Box>
     </Flex>
   );
