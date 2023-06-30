@@ -13,7 +13,7 @@ export const Projects = () => {
       <Heading
         display={["none", "none", "block", "block"]}
         textAlign="center"
-        mb={3}
+        mb={4}
       >
         Projects
       </Heading>

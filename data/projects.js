@@ -1,17 +1,17 @@
 export const projects = [
   {
     title: "chVideos",
-    description: "Thuis is the best example for this card",
-    sourceCode: "https://www.google.com",
+    description: "Download Instagram Reels video by a Telegram Bot",
+    sourceCode: "https://github.com/Christian64/chVideos",
     link: "https://github.com/Christian64/chVideos",
-    thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
+    thumbnail: "./chVideos.png",
   },
   {
-    title: "PdfLock",
-    description: "Block and unblock your pdf documents",
-    sourceCode: "https://www.google.com",
-    link: "https://www.google.com",
-    thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
+    title: "Secrect.info",
+    description: "Send sensible data to your teammates and friends privately.",
+    sourceCode: "https://www.github.com/christian64/Secrect-Info",
+    link: "https://www.secrect.info",
+    thumbnail: "./secrectInfo.png",
   },
   {
     title: "FormulaAi",
@@ -26,5 +26,5 @@ export const projects = [
     sourceCode: "https://www.google.com",
     link: "https://www.google.com",
     thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
-  }
+  },
 ];

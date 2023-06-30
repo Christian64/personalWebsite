@@ -2,6 +2,7 @@ import {
   HStack,
   Icon,
   Heading,
+  Text,
   Box,
   Button,
   Link,

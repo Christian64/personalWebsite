@@ -4,17 +4,18 @@ export const ProjectCard = ({ thumbnail, description, title, link }) => {
   return (
     <Link
       style={{ textDecoration: "none" }}
-      maxW={{ lg: 300, xl: 300, md: "90%", sm: "90%" }}
-      boxShadow="md"
+      w="300px"
+      boxShadow="sm"
       bg="white"
       href={link}
       borderRadius={5}
+      m={["auto", "auto", "0", "0"]}
     >
-      <Image src={thumbnail} />
+      <Image src={thumbnail} h="200px" />
       <Heading textAlign="center" size="md" color="#3b3a3a" p={2}>
         {title}
       </Heading>
-      <Text px={5} pb={3}>
+      <Text textAlign="center" px={5} pb={3}>
         {description}
       </Text>
     </Link>
