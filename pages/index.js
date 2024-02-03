@@ -1,25 +1,30 @@
 import { Navbar } from "@/components/Navbar/Navbar";
-import { BioCard } from "@/components/BioCard/BioCard";
-import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
 import Head from "next/head";
-import { Projects } from "@/components/Projects/Projects";
-import { Flex } from "@chakra-ui/react";
+
+import { Inter } from "next/font/google";
+import Experience from "@/components/Experience/Experience";
+import AboutMe from "@/components/AboutMe/AboutMe";
+import Footer from "@/components/Footer/Footer";
+import Projects from "@/components/Projects/Projects";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Christian Abreu</title>
-      </Head>
-      <Navbar />
-      <Flex
-        p={[0, 0, 5, 5]}
-        mt={[3, 3, 6, 6]}
-        direction={["column", "column", "row", "row"]}
-      >
-        <BioCard />
-        <Projects />
-      </Flex>
+      <main className={`${inter.className}`}>
+        <Head>
+          <title>Christian Abreu - Portfolio</title>
+        </Head>
+        <div className="flex flex-col justify-center items-center w-[80%] max-w-[1280px] m-auto">
+          <Navbar />
+          <Header />
+          <Experience />
+          <Projects />
+          <AboutMe />
+        </div>
+      </main>
+
       <Footer />
     </>
   );

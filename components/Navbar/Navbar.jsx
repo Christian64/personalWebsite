@@ -1,39 +1,41 @@
-import { Flex } from "@chakra-ui/react";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { AiFillFilePdf } from "react-icons/ai";
-import { NavItem } from "./NavItem";
+import Link from "next/link";
 
 export const Navbar = () => {
-  const items = [
+  const anchors = [
     {
-      text: "Github",
-      icon: BsGithub,
-      link: "https://www.github.com/Christian64",
+      text: "Experience",
+      link: "#experience",
     },
     {
-      text: "Linkedin",
-      icon: BsLinkedin,
-      link: "https://www.linkedin.com/in/christianabreuh",
+      text: "Projects",
+      link: "#projects",
     },
-    { text: "Resume", icon: AiFillFilePdf, link: "./resume.pdf" },
+    { text: "About Me", link: "#aboutme" },
+    { text: "Contact", link: "#contact" },
   ];
+
+  const NavLink = ({ link, text }) => {
+    return (
+      <Link
+        className="flex flex-row items-center gap-x-1 hover:text-primary text-semibold px-4 flex-nowrap"
+        href={link}
+      >
+        {text}
+      </Link>
+    );
+  };
+
   return (
     <>
-      <Flex
-        alignItems="center"
-        bg="white"
-        m="auto"
-        mt={10}
-        display={["none", "none", "flex", "flex"]}
-        borderRadius={50}
-        boxShadow="lg"
-        maxW={800}
-      >
-        {items.map((item, index) => {
-          const isLast = index === items.length - 1;
-          return <NavItem key={index} {...item} isLast={isLast} />;
-        })}
-      </Flex>
+      <nav className="navbar mt-5 mb-10 w-[100%] max-w-[500px] bg-white rounded-full shadow-md flex flex-row justify-center">
+        <ul>
+          {anchors.map((item, index) => (
+            <li key={index}>
+              <NavLink {...item} />
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 };
