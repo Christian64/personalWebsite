@@ -1,23 +1,23 @@
 export const projects = [
   {
-    title: "tinyFile",
+    title: "WhereToPromote",
     description:
-      "Use the (Christian Abreu) Algorithm to minimeze the size of your files 1 kb -> 20 mb",
-    sourceCode: "https://www.github.com/",
-    livePreview: "https://www.google.com/",
-    image:
-      "https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png",
+      "Find the best directories, subreddits & newsletters to promote your SaaS product.",
+    sourceCode: "",
+    livePreview: "https://wheretopromote.co/",
+    image: "https://i.imgur.com/6vwOJVt.png",
   },
-  {
-    title: "sheetInvoice",
-    description:
-      "Create Invoice and send it to your customers from your Google Sheet.",
-    sourceCode: "https://www.github.com/",
-    livePreview: "http://www.google.com/",
-    image:
-      "https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png",
-  },
+  // {
+  //   title: "sheetInvoice",
+  //   description:
+  //     "Create Invoice and send it to your customers from your Google Sheet.",
+  //   sourceCode: "https://www.github.com/",
+  //   livePreview: "http://www.google.com/",
+  //   image:
+  //     "https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png",
+  // },
 ];
+
 export const navItems = [];
 
 export const experiences = [
