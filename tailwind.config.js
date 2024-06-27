@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
+        ptSerif: ["var(--font-ptSerif)"],
+      },
+    },
   },
   plugins: [require("daisyui"), "tailwindcss", "autoprefixer"],
   daisyui: {
